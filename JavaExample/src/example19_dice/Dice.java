@@ -3,6 +3,7 @@ package example19_dice;
 public class Dice {
 	// 有賠率的遊戲
 	public static void main(String[] args) {
+		
 		int[] p = new int[6];
 		for (int i = 0; i < 20000; i++) {
 			int a = (int) (Math.random() * 9);

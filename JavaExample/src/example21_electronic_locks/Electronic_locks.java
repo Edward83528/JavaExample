@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class Electronic_locks {
 
 	public static void main(String[] args) {
-	//	try {
+		try {
 			test();
-	//	} catch (Exception e) {
-		//	System.out.println("你輸入的數不是可用字元");
-	//	}
+		} catch (Exception e) {
+			System.out.println("你輸入的數不是可用字元");
+		}
 	}
 
 	static void test() {
@@ -33,7 +33,7 @@ public class Electronic_locks {
 					}
 				}
 			} else {
-				System.out.println("密碼長度要介於6~20之間喔和可用字元為0~9,A~Z,a~z");
+				System.out.println("密碼長度要介於6~20之間喔和可用字元為a-z, A-Z, 0-9, 或$_*%?^");
 				continue;
 			}
 		}
@@ -56,23 +56,16 @@ public class Electronic_locks {
 	}
 
 	static boolean decide(String S) {
-		char S1[] = { 'a', 's', '1', '2', '3' };
-		ArrayList a1 = new ArrayList();
-		/*
-		 * { 'A', 'B', 'C','D','E', 'F ', 'G ', 'H ', 'I ', 'J ', 'K ', 'L ', 'M
-		 * ', 'N ', 'O ', 'P ', 'Q ', 'R', 'S ', 'T ', 'U ', 'V ', 'W ', ' X',
-		 * 'Y ', 'Z ', 'a', ' b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-		 * 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', ' v' , 'w', 'x',
-		 * 'y', 'z' };
-		 */
-		for (int w = 0; w <S1.length; w++) {
-			if ((S.charAt(S1[w])) != -1) {
-				a1.add(S1[w]);
+		String S1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$_*%?^";
+		int checkChar = 0;
+		for (int w = 0; w < S.length(); w++) {
+			if (S1.indexOf(S.charAt(w)) != -1) {
+				checkChar++;
 			}
 		}
-		if(a1.size()==S.length()){
+		if (checkChar != 0) {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}

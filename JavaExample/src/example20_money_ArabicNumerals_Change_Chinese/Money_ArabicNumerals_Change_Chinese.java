@@ -7,9 +7,9 @@ public class Money_ArabicNumerals_Change_Chinese {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("½Ğ¿é¤J§Aªº°]²£ª÷ÃB:");
+		System.out.println("è¼¸å…¥ä½ è¦åŒ¯æ¬¾çš„é‡‘é¡:");
 		String w = input.nextLine();
-		int b = w.length(); // ¨ú¼Æ¦rªºªø«×,¥Øªº¬O­n§PÂ_¦³´X¦ì¼Æ
+		int b = w.length(); // å–å­—ä¸²çš„é•·åº¦åˆ¤æ–·æ˜¯å¹¾ä½æ•¸
 
 		test(b, w);
 
@@ -17,79 +17,95 @@ public class Money_ArabicNumerals_Change_Chinese {
 
 	static void test(int a, String v) {
 		String S = v;
-		String S1[] = new String[a];// §Q¥Î¶Ç¶i¨Óªºªø«×new¥X¦r¦ê°}¦C¦s©ñ
-		String S2[] = { "¥ü", " ¤d", "¦Ê", "¤Q", "»õ", "¤d", "¦Ê", "¤Q", "¸U", "¤d", "¦Ê", "¤Q", "¤¸¾ã" };
+		String S1[] = new String[a];// åˆ©ç”¨è¼¸å…¥çš„å­—ä¸²é•·åº¦newå‡ºç›¸å°æ‡‰çš„å­—ä¸²ç©ºé–“
+		String S2[] = { "å…†", " ä»Ÿ", "ä½°", "æ‹¾", "å„„", "åƒ", "ä½°", "æ‹¾", "è¬", "ä»Ÿ", "ä½°", "æ‹¾", "å…ƒæ•´" };
 		for (int i = 0; i < a; i++) {
-			switch (S.charAt(i)) { // ¼Æ¦rÂà°ê¦r
+			switch (S.charAt(i)) { // æ•¸å­—æ›åœ‹å­—
 			case '0':
 				S1[i] = "";
 				break;
 			case '1':
-				S1[i] = "¤@";
+				S1[i] = "å£¹";
 				break;
 			case '2':
-				S1[i] = "¤G";
+				S1[i] = "è²³";
 
 				break;
 			case '3':
-				S1[i] = "¤T";
+				S1[i] = "åƒ";
 
 				break;
 			case '4':
-				S1[i] = "¥|";
+				S1[i] = "è‚†";
 
 				break;
 			case '5':
-				S1[i] = "¤­";
+				S1[i] = "ä¼";
 
 				break;
 			case '6':
-				S1[i] = "¤»";
+				S1[i] = "é™¸";
 
 				break;
 			case '7':
-				S1[i] = "¤C";
+				S1[i] = "æŸ’";
 
 				break;
 			case '8':
-				S1[i] = "¤K";
+				S1[i] = "æŒ";
 
 				break;
 			case '9':
-				S1[i] = "¤E";
+				S1[i] = "ç–";
 
 				break;
 
 			}
 		}
+
 		for (int x = 0; x < S1.length; x++) {
+
 			if (a == 13) {
+
 				System.out.print(S1[x] + S2[x]);
+
 			} else if (a == 12) {
+
 				System.out.print(S1[x] + S2[x + 1]);
 			} else if (a == 11) {
+
 				System.out.print(S1[x] + S2[x + 2]);
 			} else if (a == 10) {
+
 				System.out.print(S1[x] + S2[x + 3]);
 			} else if (a == 9) {
+
 				System.out.print(S1[x] + S2[x + 4]);
 			} else if (a == 8) {
+
 				System.out.print(S1[x] + S2[x + 5]);
 			} else if (a == 7) {
+
 				System.out.print(S1[x] + S2[x + 6]);
 			} else if (a == 6) {
+
 				System.out.print(S1[x] + S2[x + 7]);
 			} else if (a == 5) {
+
 				System.out.print(S1[x] + S2[x + 8]);
 			} else if (a == 4) {
+
 				System.out.print(S1[x] + S2[x + 9]);
 			} else if (a == 3) {
+
 				System.out.print(S1[x] + S2[x + 10]);
 			} else if (a == 2) {
 				System.out.print(S1[x] + S2[x + 11]);
 			} else {
 				System.out.print(S1[x] + S2[x + 12]);
 			}
+
 		}
+
 	}
 }

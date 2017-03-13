@@ -15,13 +15,16 @@ public class FileInputStream1 {
 
 			// 宣告byte 陣列當作資料緩衝區
 
-			byte[] buffer = new byte[1];
-			System.out.println("顯示檔案內容:");
+			byte[] buffer = new byte[totalbytes];
 
-			// 利用read()將資料讀進buffer陣列中,直到回傳值為-1表示到檔案尾巴就停止
+			// 利用read()將資料讀進buffer陣列中
 
-			while (f.read(buffer) != -1) {
-				System.out.print((char) buffer[0]);// buffer[]會傳出ASCII碼,所以要轉型
+			if (f.read(buffer) == totalbytes) {
+				String s = new String(buffer);
+				System.out.println("顯示檔案內容:");
+				System.out.print(s);
+			} else {
+				System.out.println("資料的位元總數錯誤:");
 			}
 		} catch (IOException e) {
 			System.out.println(e);

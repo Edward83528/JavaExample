@@ -1,7 +1,7 @@
 package example22_multi_dimensional_arrays;
 
 public class Multi_dimensional_arrays {
-	// �H�𪬹ϨӬ�
+	// 用一維觀點和樹狀結構來看不管幾維陣列
 	public static void main(String[] args) {
 		int a[][] = { { 1, 2, 3 }, { 4, 5 }, { 6 }, { 7, 8, 9, 1 }, { 2, 3 } };
 		for (int i = 0; i < a.length; i++) {

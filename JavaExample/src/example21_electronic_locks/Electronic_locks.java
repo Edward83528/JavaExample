@@ -12,7 +12,6 @@ public class Electronic_locks {
 		}
 	}
 
-	
 	static void test() {
 		Locks locks = new Locks();
 		boolean result = true;

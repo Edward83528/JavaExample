@@ -1,8 +1,6 @@
 package example21_electronic_locks;
 
-import java.awt.List;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Electronic_locks {
 

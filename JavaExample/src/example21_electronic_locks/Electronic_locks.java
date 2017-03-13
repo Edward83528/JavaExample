@@ -54,7 +54,6 @@ public class Electronic_locks {
 		String getinput = a.nextLine();
 		return getinput;
 	}
-
 	static boolean decide(String S) {
 		String S1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$_*%?^";
 		int checkChar = 0;

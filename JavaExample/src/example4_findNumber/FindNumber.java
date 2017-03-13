@@ -21,7 +21,7 @@ public class FindNumber {
 
 	static int findf() {
 		Scanner a = new Scanner(System.in);
-		System.out.println("¿é¤J¤@¼Æ:");
+		System.out.println("è¼¸å…¥ä½ è¦æ‰¾çš„æ•¸:");
 		int find = a.nextInt();
 		return find;
 	}

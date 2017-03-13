@@ -61,7 +61,7 @@ public class Electronic_locks {
 				checkChar++;
 			}
 		}
-		if (checkChar != 0) {
+		if (checkChar == S.length()) {
 			return true;
 		} else {
 			return false;

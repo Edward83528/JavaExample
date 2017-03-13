@@ -5,11 +5,9 @@ import java.util.*;
 public class Electronic_locks {
 
 	public static void main(String[] args) {
-		try {
-			test();
-		} catch (Exception e) {
-			System.out.println("§A¿é¤Jªº¼Æ¤£¬O¥i¥Î¦r¤¸");
-		}
+
+		test();
+
 	}
 
 	static void test() {
@@ -22,16 +20,16 @@ public class Electronic_locks {
 				while (true) {
 					String getinput = get();
 					if (getinput.equals(locks.getPassword())) {
-						System.out.println("±K½X¥¿½T,ªù±N¥´¶}");
+						System.out.println("å¯†ç¢¼æ­£ç¢º é–€å°‡æ‰“é–‹");
 						result = false;
 						break;
 					} else {
-						System.out.println("±K½X¿ù»~,½Ğ­«·s¿é¤J");
+						System.out.println("å¯†ç¢¼éŒ¯èª¤,è«‹é‡æ–°è¼¸å…¥");
 						continue;
 					}
 				}
 			} else {
-				System.out.println("±K½Xªø«×­n¤¶©ó6~20¤§¶¡³á©M¥i¥Î¦r¤¸¬°a-z, A-Z, 0-9, ©Î$_*%?^");
+				System.out.println("å¯†ç¢¼é•·åº¦è¦ä»‹æ–¼6~20,è€Œä¸”å¯ç”¨å­—å…ƒç‚º:a-z, A-Z, 0-9, ï¿½ï¿½$_*%?^");
 				continue;
 			}
 		}
@@ -40,7 +38,7 @@ public class Electronic_locks {
 
 	static String set() {
 		Scanner a = new Scanner(System.in);
-		System.out.println("½Ğ¿é¤J§A­n³]©wªº±K½X:");
+		System.out.println("è«‹è¼¸å…¥ä½ è¦è¨­å®šçš„å¯†ç¢¼:");
 		String setinput = a.nextLine();
 		return setinput;
 
@@ -48,7 +46,7 @@ public class Electronic_locks {
 
 	static String get() {
 		Scanner a = new Scanner(System.in);
-		System.out.println("½Ğ¿é¤Jªùªº±K½X:");
+		System.out.println("è«‹è¼¸å…¥å¯†ç¢¼:");
 		String getinput = a.nextLine();
 		return getinput;
 	}

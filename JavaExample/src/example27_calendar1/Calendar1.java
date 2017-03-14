@@ -45,7 +45,6 @@ public class Calendar1 {
 		if (isleap_year(y) && m < 3) {
 			s--;
 		} else {
-			//為閏年二月後會多一天
 			s++;
 		}
 		System.out.printf("%d年%d月%d日為星期%d(0為日)", y, m, d, (s + d) % 7);

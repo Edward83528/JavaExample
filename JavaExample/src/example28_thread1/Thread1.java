@@ -7,15 +7,22 @@ public class Thread1 {
 	 * T2交接的位置都不一樣)
 	 */
 	public static void main(String[] args) {
+		// 執行緒的執行狀態
+		// 1.起始狀態:(雖說new出Thread物件實體,但只是在記憶體配置空間,還未到runnable pool中)
 		test T1 = new test();
 		test T2 = new test();
 		T1.setName("T1");// 沒設系統預設會Thread-0:
 		T2.setName("T2");
 		// System.out.printf("可用執行緒:%d條\n",Thread.activeCount());//可用執行緒:1條
-		T1.start();// 將執行緒丟入runnable pool中等待被run方法呼叫執行
+		// 2.可執行狀態(利用start()方法將執行緒丟入runnable pool中等待被run方法呼叫執行)
+		T1.start();
 		T2.start();
+		// 3.執行狀態 (run()方法)
+		// 4.非可執行狀態(執行緒的狀態為暫停 可呼叫sleep() suspend() wait() notify() notifyAll())
+		// 5.銷毀狀態(5-1:執行緒的工作完成 5-2呼叫stop()方法,中止執行緒目前工作)
 		// Thread.activeCount()計算出系統中可用執行緒數量
 		System.out.printf("可用執行緒:%d條\n", Thread.activeCount());// 可用執行緒:3條(main+T1+T2)
+
 	}
 
 }

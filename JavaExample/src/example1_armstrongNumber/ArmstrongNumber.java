@@ -4,7 +4,7 @@ public class ArmstrongNumber {
 
 	
 	public static void main(String[] args) {
-		System.out.println("¦C¥X¤T¦ì¼Æªºªü©i´µ§§¼Æ:");
+		System.out.println("è¼¸å…¥ä½ è¦æ±‚çš„é˜¿å§†æ–¯å£¯æ•¸:");
 		for (int i = 100; i <= 999; i++) {
 			int a = i / 100;
 			int b = (i % 100) / 10;

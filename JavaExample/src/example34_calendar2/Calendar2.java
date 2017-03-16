@@ -17,7 +17,7 @@ public class Calendar2 {
 
 			boolean is_leap_year = false;
 
-			// 1.從1582年開始算,算到你輸入的年分的總天數
+			// 從1582年開始算,算到你輸入的年分的總天數
 			for (int i = 1582; i < year; i++) {
 				is_leap_year = isleapyear(i);// 從1582年開始算,算到你輸入的年分的年的所有年是否為閏年
 
@@ -28,8 +28,8 @@ public class Calendar2 {
 					totaldays = totaldays + d;
 				}
 			}
-
-			// 算輸入的日期的2月有幾天
+			// 以上是從1582年到輸入年分但不包括你輸入的年份所以以下是算你輸入的年份
+			// 算輸入的年份的2月有幾天
 			is_leap_year = isleapyear(year);
 			days_month[1] = is_leap_year ? 29 : 28;
 
@@ -46,7 +46,8 @@ public class Calendar2 {
 			}
 			// 星期都印出來後換行
 			System.out.println();
-			// 補空格diff(為什要+5 因為我從1582開始算 1582年一月的第一行空格有五格)(如果你要從你假設的年開始算加多少就是你假設的年份的一月的第一行的空格數)
+			// 補空格diff(為什要+5 因為我從1582開始算
+			// 1582年一月的第一行空格有五格)(如果你要從你假設的年開始算加多少就是你假設的年份的一月的第一行的空格數)
 			int diff = (5 + totaldays) % 7;
 			// 首先決定第一行要空幾格
 			for (int i = 0; i < diff; i++) {

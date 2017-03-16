@@ -46,7 +46,7 @@ public class Calendar2 {
 			}
 			// 星期都印出來後換行
 			System.out.println();
-			// 補空格diff
+			// 補空格diff(為什要+5 因為我從1582開始算 1582年一月的第一行空格有五格)(如果你要從你假設的年開始算加多少就是你假設的年份的一月的第一行的空格數)
 			int diff = (5 + totaldays) % 7;
 			// 首先決定第一行要空幾格
 			for (int i = 0; i < diff; i++) {

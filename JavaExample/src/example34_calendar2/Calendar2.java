@@ -29,12 +29,13 @@ public class Calendar2 {
 				}
 			}
 
-			// 2.算輸入的日期2月有幾天
+			// 算輸入的日期的2月有幾天
 			is_leap_year = isleapyear(year);
 			days_month[1] = is_leap_year ? 29 : 28;
 
-			// 陣列偏移-1
-			// 當月天數不算再-1
+			// 總天數再加上當年的總天數
+			// 陣列偏移-1因為陣列days_month的起始位置是0開始
+			// 當月天數不算再-1總共-2
 			for (int j = 0; j <= (month - 2); j++) {
 
 				totaldays = totaldays + days_month[j];

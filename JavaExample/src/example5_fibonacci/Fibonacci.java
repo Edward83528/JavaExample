@@ -6,7 +6,7 @@ public class Fibonacci {
 
 	public static void main(String[] args) {
 		Scanner a = new Scanner(System.in);
-		System.out.println("�A�n�D�X�ӶO��ƦC:");
+		System.out.println("請輸入你要求到幾的費氏數列:");
 		int number = a.nextInt();
 		for (int i = 0; i < number; i++) {
 			System.out.printf("%d \t", fib(i));

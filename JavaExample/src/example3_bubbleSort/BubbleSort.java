@@ -17,8 +17,8 @@ public class BubbleSort {
 			System.out.printf("%d\t", number[x]);
 		}
 		System.out.printf("\n");
-		System.out.println("�̤j�ȬO:" + number[number.length - 1]);
-		System.out.println("�̤p�ȬO:" + number[0]);
+		System.out.println("最大值:" + number[number.length - 1]);
+		System.out.println("最小值:" + number[0]);
 	}
 
 }

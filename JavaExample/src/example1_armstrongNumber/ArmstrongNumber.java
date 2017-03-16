@@ -2,7 +2,6 @@ package example1_armstrongNumber;
 
 public class ArmstrongNumber {
 
-	
 	public static void main(String[] args) {
 		System.out.println("輸入你要求的阿姆斯壯數:");
 		for (int i = 100; i <= 999; i++) {

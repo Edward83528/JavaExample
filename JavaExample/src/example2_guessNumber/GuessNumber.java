@@ -7,16 +7,16 @@ public class GuessNumber {
 	public static void main(String[] args) {
 
 		int number1 = (int) (Math.random() * 5) + 1;
-		System.out.print("¹q¸£²£¥Íªº¼Æ:");
-		System.out.println(number1); // ´ú¸Õ¦³¨S¦³bug
+		System.out.print("é›»è…¦ç”¢ç”Ÿçš„æ•¸:");
+		System.out.println(number1); // æ¸¬è©¦bugç”¨
 		do {
 
 		} while (number1 != guess());
-		System.out.println("²q¹ïÂP ¦n´Î´Î");
+		System.out.println("çŒœå°äº† å¥½æ£’æ£’ ");
 	}
 
 	static int guess() {
-		System.out.println("½Ğ¿é¤J§A­n²qªº¼Æ:");
+		System.out.println("è¼¸å…¥ä½ è¦çŒœçš„æ•¸:");
 		Scanner number = new Scanner(System.in);
 		int numberguess = number.nextInt();
 		return numberguess;

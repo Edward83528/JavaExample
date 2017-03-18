@@ -56,16 +56,16 @@ class TwId {
 
 	boolean ischeck(String s) {
 		boolean result = false;
-		if (s.matches("^[A-Z][12][0-9]{8}$")){
-		int first = area1.indexOf(s.charAt(0)) + 10;// A的轉換為11
-		int sum = (first / 10) * 1 + (first % 10) * 9 + (Integer.parseInt(s.substring(1, 2))) * 8
-				+ (Integer.parseInt(s.substring(2, 3))) * 7 + (Integer.parseInt(s.substring(3, 4))) * 6
-				+ (Integer.parseInt(s.substring(4, 5))) * 5 + (Integer.parseInt(s.substring(5, 6))) * 4
-				+ (Integer.parseInt(s.substring(6, 7))) * 3 + (Integer.parseInt(s.substring(7, 8))) * 2
-				+ (Integer.parseInt(s.substring(8, 9))) * 1 + (Integer.parseInt(s.substring(9, 10))) * 1;
-		if (sum % 10 == 0) {
-			result = true;
-		}
+		if (s.matches("^[A-Z][12][0-9]{8}$")) {
+			int first = area1.indexOf(s.charAt(0)) + 10;// A的轉換為11
+			int sum = (first / 10) * 1 + (first % 10) * 9 + (Integer.parseInt(s.substring(1, 2))) * 8
+					+ (Integer.parseInt(s.substring(2, 3))) * 7 + (Integer.parseInt(s.substring(3, 4))) * 6
+					+ (Integer.parseInt(s.substring(4, 5))) * 5 + (Integer.parseInt(s.substring(5, 6))) * 4
+					+ (Integer.parseInt(s.substring(6, 7))) * 3 + (Integer.parseInt(s.substring(7, 8))) * 2
+					+ (Integer.parseInt(s.substring(8, 9))) * 1 + (Integer.parseInt(s.substring(9, 10))) * 1;
+			if (sum % 10 == 0) {
+				result = true;
+			}
 		}
 		return result;
 	}

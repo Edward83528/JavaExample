@@ -3,8 +3,8 @@ package example36_Taiwan_Roc_Id;
 public class Taiwan_Roc_Id {
 
 	public static void main(String[] args) {
-		TwId t = new TwId();
-		System.out.println(t.getId());
+		TwId twid = new TwId();
+		System.out.println(twid.getId());
 	}
 }
 
@@ -23,6 +23,7 @@ class TwId {
 		return Id;
 	}
 
+	// 以下利用Twid的建構式產生身分證
 	TwId() {
 		this((int) (Math.random() * 26));
 	}
@@ -50,8 +51,8 @@ class TwId {
 				Id = temp + i;
 				break;
 			}
-
 		}
+
 	}
 
 	boolean ischeck(String s) {

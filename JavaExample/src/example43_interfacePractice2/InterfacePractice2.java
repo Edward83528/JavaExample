@@ -22,7 +22,7 @@ interface Polygon {
 class Rectangle implements Polygon {
 	double l, w;
 
-	// 利用建構是存入初始值
+	// 利用建構式存入初始值
 	Rectangle(double l, double w) {
 		this.l = l;
 		this.w = w;

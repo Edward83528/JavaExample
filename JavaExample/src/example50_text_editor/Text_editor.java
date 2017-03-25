@@ -92,7 +92,7 @@ public class Text_editor extends JFrame {
 			int count;
 			reader = new FileReader(selectedFile);
 			while ((count = reader.read()) != -1) {
-				jTextArea.append("" + (char) count);
+				jTextArea.append("" + (char) count);// jTextArea.append把文字顯現出來
 			}
 			reader.close();
 		} catch (Exception e) {

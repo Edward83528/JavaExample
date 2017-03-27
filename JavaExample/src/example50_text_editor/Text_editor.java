@@ -67,7 +67,7 @@ public class Text_editor extends JFrame {
 	}
 
 	// 按下Open按鍵後觸發的事件
-	protected void openFile() {
+	void openFile() {
 		JFileChooser filechoose = new JFileChooser();// 檔案選擇器
 		/*
 		 * 使用JFileChooser的showOpenDialog()方法來打開文件對話框
@@ -85,12 +85,13 @@ public class Text_editor extends JFrame {
 
 	}
 
-	private void print() {
+	// 在jTextArea印出檔案中的文字
+	void print() {
 
-		FileReader reader = null;
 		try {
 			int count;
-			reader = new FileReader(selectedFile);
+			FileReader reader = new FileReader(selectedFile);
+			// 當read讀到-1代表寫到檔案尾巴了
 			while ((count = reader.read()) != -1) {
 				jTextArea.append("" + (char) count);// jTextArea.append把文字顯現出來
 			}

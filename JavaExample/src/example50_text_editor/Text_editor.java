@@ -87,7 +87,9 @@ public class Text_editor extends JFrame {
 
 	// 在jTextArea印出檔案中的文字
 	void print() {
-
+		if (selectedFile == null) {
+			return;
+		}
 		try {
 			int count;
 			FileReader reader = new FileReader(selectedFile);
@@ -105,6 +107,9 @@ public class Text_editor extends JFrame {
 
 	// 修改檔案中的文字再存起來
 	void savefile() {
+		if (selectedFile == null) {
+			return;
+		}
 		try {
 			FileWriter fileWriter = new FileWriter(selectedFile);
 			fileWriter.write(jTextArea.getText());

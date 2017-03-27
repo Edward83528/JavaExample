@@ -2,6 +2,16 @@ package example24_fileInputStream1;
 
 import java.io.*;
 
+/*
+ * java.io.FileInputStream 是 InputStream 的子類
+ * FileInputStream 與從指定的檔案中讀取資料至目的地有關
+ *  java.io.FileOutputStream 是 OutputStream 的子類
+ *  FileOnputStream 主要與從來源地寫入資料至指定的檔案中有關。
+ */
+/*
+ * FileInputStream 可以使用 read() 方法一次讀入一個位元組，並以 int 型態傳回
+ * 也可使用 read() 方法時讀入至一個 byte 陣列(緩衝區)
+ */
 public class FileInputStream1 {
 
 	public static void main(String[] args) {

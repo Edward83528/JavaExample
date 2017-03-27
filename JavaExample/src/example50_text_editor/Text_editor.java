@@ -50,7 +50,7 @@ public class Text_editor extends JFrame {
 		Save.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				savefile();
 
 			}
 		});
@@ -100,6 +100,18 @@ public class Text_editor extends JFrame {
 			System.out.println(e);
 		}
 
+	}
+
+	// 修改檔案中的文字再存起來
+	void savefile() {
+		try {
+			FileWriter fileWriter = new FileWriter(selectedFile);
+			fileWriter.write(jTextArea.getText());
+			fileWriter.flush();// 為了確保緩衝區中的資料一定被寫出至目的地，建議最後執行flush()將緩衝區中的資料全部寫出目的串流中
+			fileWriter.close();// 關閉串流
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void main(String[] args) {

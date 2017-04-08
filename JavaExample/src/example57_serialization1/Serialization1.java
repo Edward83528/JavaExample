@@ -45,14 +45,12 @@ public class Serialization1 {
 		System.out.println("反序列化");
 		System.out.println("Name: " + e.name);// Name: harry
 		System.out.println("Address: " + e.address);// Address: Taiwan
-		System.out.println("phone: " + e.phone);// phone:
-												// 0(因為phone加了transient不可序列化，這個值是不會被發送到輸出流。反序列化的Employee對象的phone為0。)
+		System.out.println("phone: " + e.phone);// phone:0(因為phone加了transient不可序列化，這個值是不會被發送到輸出流。反序列化的Employee對象的phone為0)
 		System.out.println("Number: " + e.number);// Number: 51
 
 	}
 
 }
-
 // 一類被序列化成功，兩個條件必須滿足：
 // 1.這個類必須實現java.io.Serializable
 // 2.所有在類中的字段必須是可序列化的。如果一個字段不是可序列化的，必須注明transient

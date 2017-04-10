@@ -42,7 +42,7 @@ public class Serialization1 {
 		} catch (Exception i) {
 			System.out.print(i.toString());
 		}
-		System.out.println("反序列化");
+		System.out.println("反序列化");// 並不會出現Employee的建構子,因為序列化只保存該物件的狀態並不保存方法/建構子,
 		System.out.println("Name: " + e.name);// Name: harry
 		System.out.println("Address: " + e.address);// Address: Taiwan
 		System.out.println("phone: " + e.phone);// phone:0(因為phone加了transient不可序列化，這個值是不會被發送到輸出流。反序列化的Employee對象的phone為0)
@@ -51,12 +51,23 @@ public class Serialization1 {
 	}
 
 }
+
 // 一類被序列化成功，兩個條件必須滿足：
 // 1.這個類必須實現java.io.Serializable
 // 2.所有在類中的字段必須是可序列化的。如果一個字段不是可序列化的，必須注明transient
-class Employee implements Serializable {
+class boss {
+	boss() {
+		System.out.println("這是boss的建構子");
+	}
+}
+
+class Employee extends boss implements Serializable {
 	public String name;
 	public String address;
 	public transient int phone;
 	public int number;
+
+	Employee() {
+		System.out.println("這是Employee的建構子");
+	}
 }

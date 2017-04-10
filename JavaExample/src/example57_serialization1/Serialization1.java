@@ -42,7 +42,7 @@ public class Serialization1 {
 		} catch (Exception i) {
 			System.out.print(i.toString());
 		}
-		System.out.println("反序列化");// 並不會出現Employee的建構子,因為序列化只保存該物件的狀態並不保存方法/建構子,
+		System.out.println("反序列化");// 並不會出現Employee的建構子,因為序列化只保存該物件的狀態並不保存方法/建構子
 		System.out.println("Name: " + e.name);// Name: harry
 		System.out.println("Address: " + e.address);// Address: Taiwan
 		System.out.println("phone: " + e.phone);// phone:0(因為phone加了transient不可序列化，這個值是不會被發送到輸出流。反序列化的Employee對象的phone為0)

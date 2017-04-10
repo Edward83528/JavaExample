@@ -3,27 +3,31 @@ package example16_map1;
 import java.util.*;
 
 public class Map1 {
-	// ¬°µL¶¶§Ç©Ê¥BµL±Æ§Ç©Ê
-	// Map¨Ã¨S¦³Ä~©Ó¶°¦X¤¶­±,³QÂkÃş¬°¶°¦Xªº¤@³¡¤À,¬O¦]Hashtable»PHashMap³o¨â­Ó¶°¦XÃş§O¹ê§@Map¤¶­±
-	// Map§Q¥Î«ü©wªºÁä­È(key)¨Ó¨M©w¤¸¯ÀÂ\©ñ¦ì¸m,Áä­È¤£¥i¥H­«ÂĞ,¦ı¤£¦PªºÁä­È¥i¥H¦s©ñ­«ÂĞªº¤¸¯À¤º®e
-	// MapªºÀuÂI´N¬O¥i¥H­Ó§O¾Ş§@key­È»P¤¸¯À¤º®e,¼W¥[µ{¦¡¹ê§@ªº¼u©Ê
-	// §Q¥Îput¤èªk©ñ¤JMap¤¤,§Q¥Îget("key")¨ú±o¸Ó¤¸¯À¤º®e
+	// ç‚ºç„¡é †åºæ€§ä¸”ç„¡æ’åºæ€§
+	// Mapä¸¦æ²’æœ‰ç¹¼æ‰¿é›†åˆä»‹é¢,è¢«æ­¸é¡ç‚ºé›†åˆçš„ä¸€éƒ¨åˆ†,æ˜¯å› Hashtableèˆ‡HashMapé€™å…©å€‹é›†åˆé¡åˆ¥å¯¦ä½œMapä»‹é¢
+	// Mapåˆ©ç”¨æŒ‡å®šçš„éµå€¼(key)ä¾†æ±ºå®šå…ƒç´ æ“ºæ”¾ä½ç½®,éµå€¼ä¸å¯ä»¥é‡è¦†,ä½†ä¸åŒçš„éµå€¼å¯ä»¥å­˜æ”¾é‡è¦†çš„å…ƒç´ å…§å®¹
+	// Mapçš„å„ªé»å°±æ˜¯å¯ä»¥å€‹åˆ¥æ“ä½œkeyå€¼èˆ‡å…ƒç´ å…§å®¹,å¢åŠ ç¨‹å¼å¯¦ä½œçš„å½ˆæ€§
+	// åˆ©ç”¨putæ–¹æ³•æ”¾å…¥Mapä¸­,åˆ©ç”¨get("key")å–å¾—è©²å…ƒç´ å…§å®¹
 	public static void main(String[] args) {
 		HashMap map = new HashMap();
-		map.put("A", "«Cµì");
-		map.put("1", "ª¯");
+		map.put("A", "é’è›™");
+		map.put("1", "ç‹—");
 		map.put("4", "tony");
 		map.put("100", 200);
-		map.put(null, null);// HashMap¥i¥H¤¹³\null
-		System.out.println(map.toString());// ¿é¥X{null=null, A=«Cµì, 1=ª¯,//
-											// 100=200,// 4=tony}
-		System.out.println(map.get("A"));// «Cµì
+		map.put(null, null);// HashMapå¯ä»¥å…è¨±null
+		System.out.println(map.toString());// è¼¸å‡º{null=null, A=é’è›™, 1=ç‹—,100=200,4=tony}
+		System.out.println("======");
+		// å°‹è¨ªMap
+		for (Object key : map.keySet()) {
+			System.out.println(key + " : " + map.get(key));
+		}
+		System.out.println("======");
+		System.out.println(map.get("A"));// // é’è›™
 		System.out.println(map.get("100"));// 200
 		System.out.println(map.get("null"));// null
-		System.out.println(map.get("S"));// ¨S¦³¸Ó¤¸¯À¿é¥Xnull
-		map.remove("1");// ²¾°£key=1ªº¤¸¯À¤º®e
-		System.out.println(map.toString());// ¿é¥X{null=null, A=«Cµì, 100=200,//
-											// 4=tony}
+		System.out.println(map.get("S"));// æ²’æœ‰è©²å…ƒç´ è¼¸å‡ºnull
+		map.remove("1");// ç§»é™¤key=1çš„å…ƒç´ å…§å®¹
+		System.out.println(map.toString());// è¼¸å‡º{null=null, A=é’è›™, 100=200,4=tony}
 	}
 
 }

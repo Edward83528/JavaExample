@@ -51,10 +51,6 @@ class My_Clock extends JPanel {
 
 	public My_Clock() {
 		setBackground(Color.PINK);// 背景為粉色
-		// 隨時更新現在的時間
-		minute = calendar.get(Calendar.MINUTE);
-		second = calendar.get(Calendar.SECOND);
-		hour = calendar.get(Calendar.HOUR);
 	}
 
 	public void timer() {
@@ -70,6 +66,7 @@ class My_Clock extends JPanel {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2D = (Graphics2D) g;
+		// 隨時更新現在的時間
 		minute = calendar.get(Calendar.MINUTE);
 		second = calendar.get(Calendar.SECOND);
 		hour = calendar.get(Calendar.HOUR);

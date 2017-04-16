@@ -104,6 +104,7 @@ class My_Clock extends JPanel {
 		// 印出數字
 		for (int i = 0; i < 12; i++) {
 			g2d.setColor(Color.BLACK);
+			// drawString(印出的文字, int x, int y)
 			g2d.drawString(number[i], (int) (x1 + 135 * Math.sin(i * Math.PI / 6)) - 5,
 					(int) (y1 - 135 * Math.cos(i * Math.PI / 6)) + 5);
 		}

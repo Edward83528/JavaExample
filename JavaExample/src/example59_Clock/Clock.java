@@ -51,6 +51,7 @@ class My_Clock extends JPanel {
 
 	public My_Clock() {
 		setBackground(Color.PINK);// 背景為粉色
+	
 	}
 
 	public void timer() {
@@ -74,8 +75,8 @@ class My_Clock extends JPanel {
 		g2D.setColor(Color.BLACK);// 秒針為黑色
 		// x1,y1為圓心
 		// 加110減110為我設置秒針的長度(你可以自己設定)
-		g2D.drawLine(x1, y1, (int) (x1 + 110 * Math.sin((second - 30) * Math.PI / 30)),
-				(int) (y1 - 110 * Math.cos((second - 30) * Math.PI / 30)));
+		g2D.drawLine(x1, y1, (int) (x1 + 110 * Math.sin((second ) * Math.PI / 30)),
+				(int) (y1 - 110 * Math.cos((second ) * Math.PI / 30)));
 		// 設置分針
 		// x1,y1為圓心
 		// 加80減80為我設置的長度(你可以自己設定)

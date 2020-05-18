@@ -26,7 +26,7 @@ public class Clock extends JFrame {
 			}
 		});
 		timer.start();
-		setSize(400, 400);
+		setSize(400, 450);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 

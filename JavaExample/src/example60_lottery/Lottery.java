@@ -68,6 +68,9 @@ public class Lottery {
 			double randomNumber;
 			randomNumber = Math.random();
 
+			// 為了便於計算和理解，設定每種獎品的權重分別為1，2，3，4，所以被抽到的概率分別為0.1，0.2，0.3，0.4（本次活動中獎概率為100%）。
+			// 生成一個隨機數randomNumber，然後根據隨機數所處區域判斷獎品
+
 			// 根據隨機數在所有獎品分佈的區域並確定所抽獎品
 			double d1 = 0;
 			double d2 = 0;

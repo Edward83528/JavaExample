@@ -13,22 +13,22 @@ public class Lottery {
 		List<Prize> prizes = new ArrayList<Prize>();
 
 		Prize p1 = new Prize();
-		p1.setPrize_name("明星海報");
+		p1.setPrize_name("20點");
 		p1.setPrize_weight(1);// 獎品的權重設定成1
 		prizes.add(p1);
 
 		Prize p2 = new Prize();
-		p2.setPrize_name("台北別墅");
+		p2.setPrize_name("15點");
 		p2.setPrize_weight(2);// 獎品的權重設定成2
 		prizes.add(p2);
 
 		Prize p3 = new Prize();
-		p3.setPrize_name("奧迪a9");
+		p3.setPrize_name("10點");
 		p3.setPrize_weight(3);// 獎品的權重設定成3
 		prizes.add(p3);
 
 		Prize p4 = new Prize();
-		p4.setPrize_name("雙色球彩票");
+		p4.setPrize_name("5點");
 		p4.setPrize_weight(4);// 獎品的權重設定成4
 		prizes.add(p4);
 
@@ -42,10 +42,10 @@ public class Lottery {
 		}
 		System.out.println("抽獎結束");
 		System.out.println("每種獎品抽到的數量為：");
-		System.out.println("一等獎：" + result[0]);
-		System.out.println("二等獎：" + result[1]);
-		System.out.println("三等獎：" + result[2]);
-		System.out.println("四等獎：" + result[3]);
+		System.out.println("一等獎20點：" + result[0]);
+		System.out.println("二等獎15點：" + result[1]);
+		System.out.println("三等獎10點：" + result[2]);
+		System.out.println("四等獎5點：" + result[3]);
 	}
 
 	/**

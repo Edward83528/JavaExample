@@ -1,6 +1,7 @@
 package example63_LocalDateTime;
 
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.chrono.Chronology;
@@ -81,6 +82,17 @@ public final class LocalDateTime_core {
 	 */
 	public static boolean localDateTimeIsEqual(LocalDateTime firstDateTime, LocalDateTime secondDateTime) {
 		return firstDateTime.isEqual(secondDateTime);
+	}
+
+	/**
+	 * 兩個日期相差天數
+	 *
+	 * @param firstDateTime  第一個日期
+	 * @param secondDateTime 第二個日期
+	 */
+	public static long localDateTimeBetween(LocalDateTime firstDateTime, LocalDateTime secondDateTime) {
+		Duration duration = Duration.between(firstDateTime, secondDateTime);
+		return duration.toDays();
 	}
 
 	public static String convertTWDate(String AD, String beforeFormat, String afterFormat) {

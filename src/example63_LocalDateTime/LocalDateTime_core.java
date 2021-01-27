@@ -51,6 +51,17 @@ public final class LocalDateTime_core {
 		return localDateTime.format(dateFormatter);
 	}
 
+	/***
+	 * 偏移天數
+	 * 
+	 * @param localDateTime LocalDateTime日期
+	 * @param offset        偏移值(負往前推,反之)
+	 * @return
+	 */
+	public static LocalDateTime localDateTimeOffset(LocalDateTime localDateTime, long offset) {
+		return LocalDateTime.now().plusDays(offset);
+	}
+
 	/**
 	 * 比較第一個日期是否大於第二個日期
 	 *

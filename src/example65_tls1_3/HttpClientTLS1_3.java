@@ -23,7 +23,12 @@ public class HttpClientTLS1_3 {
 
 		try {
 			String json = task1();
-			task2(json);
+			String[] jsonary = json.split("TCPASS");
+			if (jsonary != null && jsonary.length > 0) {
+				for (int i = 0; i < jsonary.length; i++) {
+					task2(json);
+				}
+			}
 		} catch (IOException | InterruptedException e) {
 			System.out.println(e.toString());
 		}
